@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plot Availability Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://example.com/gated-community-background.jpg'); /* Replace with a real image URL */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .availability-checker {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .availability-checker label {
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
+
+        .availability-checker input {
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .availability-checker button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: white;
+            background-color: green;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .address {
+            margin-top: 50px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gated Community Plot Availability Checker</h1>
+    <div class="availability-checker">
+        <label for="plotNumber">Enter Plot Number (1-550):</label>
+        <input type="number" id="plotNumber" min="1" max="550" placeholder="Plot Number">
+        <button onclick="checkAvailability()">Check Availability</button>
+    </div>
+    <p id="result"></p>
+    <div class="address">
+        <p>Nandiwanaparthy, Yacharam,</p>
+        <p>Rangareddy, Hyderabad-501509</p>
+    </div>
+
+    <script>
+        function checkAvailability() {
+            const plotNumber = document.getElementById('plotNumber').value;
+            const result = document.getElementById('result');
+
+            if (plotNumber >= 1 && plotNumber <= 550) {
+                // Simulate checking availability (you can add logic here)
+                result.textContent = `Plot number ${plotNumber} is available.`;
+            } else {
+                result.textContent = 'Please enter a valid plot number between 1 and 550.';
+            }
+        }
+    </script>
+</body>
+</html>
